@@ -1,8 +1,8 @@
 /* =============== EMAIL JS =============== */
 
-function() {
+(function() {
     emiljs.init('Alejandro Mantilla');
-};
+});
 
 document.getElementById('contact-form').addEventListener('submit', function(event) {
     event.preventDefault();

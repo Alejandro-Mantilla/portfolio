@@ -15,6 +15,10 @@ const nav = document.querySelector(".nav"),
         const a = navList[i].querySelector("a");
         a.addEventListener("click", function()
         {
-            console.log(this)
+            for(let j=0; j<totalNavList; j++)
+                {
+                    navList[j].querySelector("a").classList.remove("active")
+                }
+            this.classList.add("active")
         })
       }

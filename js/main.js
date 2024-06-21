@@ -4,7 +4,7 @@
     emiljs.init('Alejandro Mantilla');
 })();
 
-document.getElementById('contact-info').addEventListener('submit-btn', function(event) {
+document.getElementById('contact-info').addEventListener('submit', function(event) {
     event.preventDefault();
 
     let templateParams = {

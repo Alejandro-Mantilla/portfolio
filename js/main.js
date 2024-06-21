@@ -1,7 +1,7 @@
 /* =============== EMAIL JS =============== */
 
 (function() {
-    emiljs.init('Alejandro Mantilla');
+    emiljs.init('gmailsend');
 })();
 
 document.getElementById('contact-info').addEventListener('submit', function(event) {
@@ -13,7 +13,7 @@ document.getElementById('contact-info').addEventListener('submit', function(even
         message: event.target.message.value,
     };
 
-    emailjs.send('dardro0511', 'dardro11', templateParams)
+    emailjs.send('dardro1105', 'dardro05', templateParams)
         .then(function(response) {
             alert('Message sent successfully: ' + response.status);
         }, function(error) {

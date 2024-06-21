@@ -2,25 +2,21 @@
 
 (function() {
     emiljs.init('Alejandro Mantilla');
-});
+})();
 
-document.getElementById('contact-form').addEventListener('submit', function(event) {
+document.getElementById('contact-info').addEventListener('submit-btn', function(event) {
     event.preventDefault();
 
-    let userName = event.target.user_name.value;
-    let userEmail = event.target.user_email.value;
-    let userMessage = event.target.user_message.value;
-
     let templateParams = {
-        user_name: userName,
-        user_email: userEmail,
-        user_message: userMessage
+        user_name: event.target.user_name.value,
+        user_email: event.target.user_email.value,
+        message: event.target.message.value,
     };
 
-    emiljs.send('dardro0511', 'dardro11', templateParams)
-    .then(function(response) {
-        alert('Your message  was sent successfully: ' + response.status);
-    }, function(error) {
-        alert('Error sending message: ' + error.text);
-    });
+    emailjs.send('dardro0511', 'dardro11', templateParams)
+        .then(function(response) {
+            alert('Message sent successfully: ' + response.status);
+        }, function(error) {
+            alert('Error sending message: ' + error.text);
+        });
 })

@@ -1,7 +1,7 @@
 /* =============== EMAIL JS =============== */
 
 (function() {
-    emiljs.init('gmailsend');
+    emiljs.init('AlejandroMantilla');
 })();
 
 document.getElementById('contact-info').addEventListener('submit', function(event) {

@@ -8,11 +8,16 @@ document.getElementById('contact-form').addEventListener('submit', function(even
     const serviceID = 'dardro05';
     const templateID = 'dardro05';
 
-    emailjs.send(serviceID, templateID, {
+    const templateParams = {
         from_name: formData.get('name'),
         from_email: formData.get('email'),
+        from_subject: formData.get('subject'),
         message: formData.get('message')
-    })
+    };
+
+    console.log(templateParams);
+
+    emailjs.send(serviceID, templateID, templateParams)
     .then(response => {
         console.log('SUCCESS!', response.status, response.txt);
         alert('Message sent succesfully');

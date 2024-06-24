@@ -21,9 +21,16 @@ document.getElementById('contact-form').addEventListener('submit', function(even
     .then(response => {
         console.log('SUCCESS!', response.status, response.txt);
         alert('Message sent succesfully');
+
+        document.getElementById('contact-form').reset();
+        setTimeout(() => {
+            location.reload();
+        }, 1000);
     })
     .catch(error => {
         console.log('FAILED...', error);
         alert('There was an error sending the message');
+
+        document.getElementById('contact-form').reset();
     });
 });

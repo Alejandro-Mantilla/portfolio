@@ -91,3 +91,18 @@ const nav = document.querySelector(".nav"),
                     allSection[i].classList.toggle("open");
                 }
             }
+
+            document.addEventListener('DOMContentLoaded', function() {
+                var downloadBtn = document.getElementById('download-cv-btn');
+
+                if (downloadBtn) {
+                    downloadBtn.addEventListener('click', function(event) {
+                        event.preventDefault();
+
+                        var link = document.createElement('a');
+                        link.href = 'cv/cv_alejandro_mantilla.pdf';
+                        link.download = 'cv_alejandro_mantilla.pdf';
+                        link.click();
+                    });
+                }
+            });

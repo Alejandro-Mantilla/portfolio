@@ -92,7 +92,7 @@ const nav = document.querySelector(".nav"),
                 }
             }
 
-/* =============== OPERATON DOWNLOAD CV =============== */
+/* =============== OPERATION DOWNLOAD CV =============== */
 
             document.addEventListener('DOMContentLoaded', function() {
                 var downloadBtn = document.getElementById('download-cv-btn');

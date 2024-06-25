@@ -740,6 +740,11 @@ border: .1rem solid var(--bg-black-50);
     height: .8rem;
     border-right: .12rem solid var(--skin-color);
     border-bottom: .12rem solid var(--skin-color);
+    transition: .2s;
+}
+.selected-option div.active::after {
+    transform: translateY(-50%) rotate(225deg);
+
 }
 .select-box .options {
     position: absolute;
@@ -747,6 +752,10 @@ border: .1rem solid var(--bg-black-50);
     width: 100%;
     background-color: #fff;
     border-radius: .5rem;
+    display: none;
+}
+.select-box .options.active {
+    display: block;
 }
 .select-box .options::before {
     position: absolute;
@@ -762,6 +771,7 @@ input.search-box {
     background-color: var(--skin-color);
     color: var(--bg-black-900);
     border-radius: .5rem .5rem 0 0;
+    padding: 1.4rem 1rem;
 }
 .select-box ol {
     list-style: none;
@@ -783,6 +793,9 @@ input.search-box {
     display: flex;
     justify-content: space-between;
     cursor: pointer;
+}
+.select-box ol li:not(:last-child) {
+    border-bottom:  .1rem solid #eee;
 }
 .select-box ol li:hover {
     background-color: var(--skin-color);

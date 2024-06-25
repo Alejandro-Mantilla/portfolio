@@ -794,6 +794,9 @@ input.search-box {
     justify-content: space-between;
     cursor: pointer;
 }
+.select-box ol li.hide {
+    display: none;
+}
 .select-box ol li:not(:last-child) {
     border-bottom:  .1rem solid #eee;
 }

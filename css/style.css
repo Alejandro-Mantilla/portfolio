@@ -678,3 +678,115 @@ h3.my-profession {
     height: 50px;
     padding: 0 50px;
 }
+
+/*.select-box input {
+    width: 100%;
+    height: 50px;
+    border-radius: 25px;
+    background: var(--bg-black-100);
+    border:  1px solid var(--bg-black-50);
+    padding: 10px 25px;
+    margin: 15px 0 -5px;
+    font-size: 16px;
+    color: var(--text-black-700);
+    transition: all 0.3s ease;
+}*/
+
+.select-box {
+    position: relative;
+    width: 26rem;
+    margin: 7rem auto;
+}
+.select-box input {
+    width: 100%;
+    padding: 1rem .6rem;
+    font-size: 1.1rem;
+    border-radius: .5rem;
+
+    border: .1rem solid transparent;
+    outline: none;
+}
+
+input[type="tel"] {
+    border-radius: 0 .5rem .5rem 0;
+}
+
+.select-box input:focus {
+border: .1rem solid var(--bg-black-50);
+}
+
+.selected-option {
+    background: var(--bg-black-100);
+    border-radius: .5rem;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.selected-option div {
+    position: relative;
+    width: 6rem;
+    padding: 0 2.8rem 0 .5rem;
+    text-align: center;
+    cursor: pointer;
+}
+.selected-option div::after {
+    position: absolute;
+    content: "";
+    right: .8rem;
+    top: 50%;
+    transform: translateY(-50%) rotate(45deg);
+    width: .8rem;
+    height: .8rem;
+    border-right: .12rem solid var(--skin-color);
+    border-bottom: .12rem solid var(--skin-color);
+}
+.select-box .options {
+    position: absolute;
+    top: 4rem;
+    width: 100%;
+    background-color: #fff;
+    border-radius: .5rem;
+}
+.select-box .options::before {
+    position: absolute;
+    content: "";
+    left: 1rem;
+    top: -1.2rem;
+    width: 0;
+    height: 0;
+    border:  .6rem solid transparent;
+    border-bottom-color: var(--skin-color);
+}
+input.search-box {
+    background-color: var(--skin-color);
+    color: var(--bg-black-900);
+    border-radius: .5rem .5rem 0 0;
+}
+.select-box ol {
+    list-style: none;
+    max-height: 23rem;
+    overflow: overlay;
+    
+}
+.select-box ol::-webkit-scrollbar {
+    width: 0.6rem;
+}
+.select-box ol::-webkit-scrollbar-thumb {
+    width: 0.4rem;
+    height: 3rem;
+    background-color: #ccc;
+    border-radius: .4rem;
+}
+.select-box ol li {
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+}
+.select-box ol li:hover {
+    background-color: var(--skin-color);
+}
+.select-box ol li .country-name {
+    margin-left: .4rem;
+}

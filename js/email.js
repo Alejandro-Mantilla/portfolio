@@ -12,6 +12,7 @@ document.getElementById('contact-form').addEventListener('submit', function(even
         from_name: formData.get('name'),
         from_email: formData.get('email'),
         from_subject: formData.get('subject'),
+        from_cellphone: formData.get('phone_number'),
         message: formData.get('message')
     };
 

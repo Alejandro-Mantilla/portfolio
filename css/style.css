@@ -692,6 +692,11 @@ h3.my-profession {
     transition: all 0.3s ease;
 }*/
 
+.contact .select-box {
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+
 .select-box {
     position: relative;
     width: 26rem;
@@ -717,7 +722,7 @@ border: .1rem solid var(--bg-black-50);
 
 .selected-option {
     background: var(--bg-black-100);
-    border-radius: .5rem;
+    border-radius: 1.5rem;
     overflow: hidden;
     display: flex;
     justify-content: space-between;
@@ -725,7 +730,7 @@ border: .1rem solid var(--bg-black-50);
 }
 .selected-option div {
     position: relative;
-    width: 6rem;
+    width: 10rem;
     padding: 0 2.8rem 0 .5rem;
     text-align: center;
     cursor: pointer;
@@ -735,7 +740,7 @@ border: .1rem solid var(--bg-black-50);
     content: "";
     right: .8rem;
     top: 50%;
-    transform: translateY(-50%) rotate(45deg);
+    transform: translateY(-75%) rotate(45deg);
     width: .8rem;
     height: .8rem;
     border-right: .12rem solid var(--skin-color);
@@ -743,7 +748,7 @@ border: .1rem solid var(--bg-black-50);
     transition: .2s;
 }
 .selected-option div.active::after {
-    transform: translateY(-50%) rotate(225deg);
+    transform: translateY(-20%) rotate(225deg);
 
 }
 .select-box .options {

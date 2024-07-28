@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 emailjs.init('XUiDpjtLKmPxqNM6u');
 
 document.getElementById('contact-form').addEventListener('submit', function(event) {
@@ -34,4 +35,42 @@ document.getElementById('contact-form').addEventListener('submit', function(even
 
         document.getElementById('contact-form').reset();
     });
+=======
+emailjs.init('XUiDpjtLKmPxqNM6u');
+
+document.getElementById('contact-form').addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    const formData = new FormData(this);
+
+    const serviceID = 'dardro05';
+    const templateID = 'dardro05';
+
+    const templateParams = {
+        from_name: formData.get('name'),
+        from_email: formData.get('email'),
+        from_subject: formData.get('subject'),
+        from_cellphone: formData.get('tel'),
+        message: formData.get('message')
+    };
+
+    console.log(templateParams);
+
+    emailjs.send(serviceID, templateID, templateParams)
+    .then(response => {
+        console.log('SUCCESS!', response.status, response.txt);
+        alert('Message sent succesfully');
+
+        document.getElementById('contact-form').reset();
+        setTimeout(() => {
+            location.reload();
+        }, 1000);
+    })
+    .catch(error => {
+        console.log('FAILED...', error);
+        alert('There was an error sending the message');
+
+        document.getElementById('contact-form').reset();
+    });
+>>>>>>> 5204a8a8c8603b75b9767032489107914a946f74
 });
